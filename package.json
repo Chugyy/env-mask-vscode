@@ -1,6 +1,6 @@
 {
-  "name": "env-masker",
-  "displayName": "ENV Masker",
+  "name": "dotenv-masker",
+  "displayName": "DotEnv Masker",
   "description": "Visually mask values in .env files",
   "version": "0.0.1",
   "publisher": "hugohoarau",
