@@ -1,0 +1,65 @@
+{
+  "name": "env-mask",
+  "displayName": "ENV Mask",
+  "description": "Visually mask values in .env files",
+  "version": "0.0.1",
+  "publisher": "hugohoarau",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hugohoarau/env-mask-vscode"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "env",
+    "dotenv",
+    "security",
+    "privacy",
+    "mask",
+    "hide"
+  ],
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:properties",
+    "onLanguage:dotenv"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "env-mask.toggle",
+        "title": "ENV Mask: Toggle Masking"
+      }
+    ],
+    "configuration": {
+      "title": "ENV Mask",
+      "properties": {
+        "envMask.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable .env value masking"
+        },
+        "envMask.unmaskActiveLine": {
+          "type": "boolean",
+          "default": true,
+          "description": "Unmask the line where cursor is positioned"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "echo \"No tests yet\""
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "typescript": "^5.6.0"
+  }
+}
